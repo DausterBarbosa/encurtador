@@ -42,9 +42,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require('dotenv/config');
 var nanoid_1 = require("nanoid");
 var shortLink_1 = __importDefault(require("../database/models/shortLink"));
+var path_1 = require("path");
 var ShortLinkController = /** @class */ (function () {
     function ShortLinkController() {
     }
+    ShortLinkController.prototype.index = function (req, res) {
+        return res.sendFile((0, path_1.resolve)(__dirname, "../../public/index.html"));
+    };
     ShortLinkController.prototype.create = function (req, res) {
         return __awaiter(this, void 0, void 0, function () {
             var url, shortlink, hash, newshortlink;

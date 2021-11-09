@@ -8,4 +8,5 @@ var ShortLinkController_1 = __importDefault(require("./controllers/ShortLinkCont
 var router = (0, express_1.Router)();
 router.post("/create", ShortLinkController_1.default.create);
 router.get("/:hash", ShortLinkController_1.default.redirect);
+router.get("/", ShortLinkController_1.default.index);
 exports.default = router;

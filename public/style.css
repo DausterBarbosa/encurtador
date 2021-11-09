@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF;
+}
+
+#main{
+    width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main .head .logo{
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+}
+
+#main .head .logo img{
+    width: 70px;
+    margin-right: 10px;
+}
+
+#main .head p{
+    font-size: 22px;
+    margin-top: 20px;
+    color: rgb(87, 84, 84);
+}
+
+#main .inputpanel{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#main .inputpanel input{
+    padding: 15px;
+    font-size: 17px;
+    width: 500px;
+    outline: none;
+    border: 1px solid #EEE;
+    background-color: rgb(243, 242, 242);
+}
+
+#main .inputpanel button{
+    background-color: #25b7d3;
+    padding: 15px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #FFF;
+    border: 1px solid #EEE;
+    outline: none;
+}
+
+#main .inputpanel button:hover{
+    background-color: #21b0cc;
+}
+
+#main .response{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#main .response input{
+    padding: 15px;
+    font-size: 17px;
+    width: 450px;
+    outline: none;
+    border: 1px solid #EEE;
+    background-color: rgb(243, 242, 242);
+}
+
+#main .loading{
+    display: none;
+    margin-top: 100px;
+}
+
+#main .loading strong{
+    font-size: 30px;
+}

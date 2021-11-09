@@ -6,7 +6,13 @@ import {nanoid} from "nanoid";
 
 import ShortLink from "../database/models/shortLink";
 
+import {resolve} from "path";
+
 class ShortLinkController{
+    index(req:Request, res:Response){
+        return res.sendFile(resolve(__dirname, "../../public/index.html"));
+    }
+
     async create(req:Request, res:Response){ 
         const {url} = req.body;
 

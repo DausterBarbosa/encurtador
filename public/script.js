@@ -16,7 +16,7 @@ function handleRequestQrCode(){
 }
 
 function handleRequest(){
-    fetch("http://localhost:3000/create", {
+    fetch("https://encurtado.herokuapp.com/create", {
         method: "post",
         headers: {"Content-type": "application/json;charset=UTF-8"},
         body: JSON.stringify({url: input.value}),

@@ -1,3 +1,5 @@
+require('dotenv/config');
+
 import {connect} from "mongoose";
 
 class ConnectDatabase{
@@ -7,7 +9,7 @@ class ConnectDatabase{
 
     async connect(){
         try {
-            await connect("mongodb+srv://dausterBarbosa:96041482@eduzzstore.wqllw.mongodb.net/shortLinks?retryWrites=true&w=majority");
+            await connect(`${process.env.DATABASE_URL_CONNECT}`);
         } catch (error) {
             console.log(error);
         }

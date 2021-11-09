@@ -1,3 +1,5 @@
+require('dotenv/config');
+
 import {Request, Response} from "express";
 
 import {nanoid} from "nanoid";
@@ -19,7 +21,7 @@ class ShortLinkController{
         const newshortlink = await ShortLink.create({
             original_link: url,
             hash,
-            short_link: `http://localhost:3000/${hash}`,
+            short_link: `${process.env.BASE_URL}/${hash}`,
         });
 
         return res.status(200).json(newshortlink);

@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+require('dotenv/config');
 var mongoose_1 = require("mongoose");
 var ConnectDatabase = /** @class */ (function () {
     function ConnectDatabase() {
@@ -48,7 +49,7 @@ var ConnectDatabase = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, (0, mongoose_1.connect)("mongodb+srv://dausterBarbosa:96041482@eduzzstore.wqllw.mongodb.net/shortLinks?retryWrites=true&w=majority")];
+                        return [4 /*yield*/, (0, mongoose_1.connect)("" + process.env.DATABASE_URL_CONNECT)];
                     case 1:
                         _a.sent();
                         return [3 /*break*/, 3];
